@@ -15,90 +15,153 @@
 <!-- ////////////////////////////////////////////////////////////////////////////////////////
                                START SECTION 1 - THE NAVBAR SECTION  
 /////////////////////////////////////////////////////////////////////////////////////////////-->
-<nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="">
-        <!-- <img src="images/logoo.png" alt="logo image"> -->
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#home">About</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li> -->
-          <!-- <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li> -->
-          <!-- <li class="nav-item"><a class="nav-link" href="#faq">faq</a></li> -->
-          <li class="nav-item"><a class="nav-link" href="#portfolio">portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">contact</a>
-          </li>
-        </ul>
-        <!-- <button type="button" class="rounded-pill btn-rounded">
-          +1 728365413
-          <span>
-            <i class="fas fa-phone-alt"></i>
-          </span>
-        </button> -->
-      </div>
+<nav class="navbar navbar-expand-lg shadow fixed-top" 
+  style="background-color:#000; padding:15px 0; transition:all 0.3s ease; border-bottom:1px solid rgba(255,255,255,0.05);">
+  <div class="container">
+    
+    <!-- Brand -->
+    <a class="navbar-brand" href="#" 
+      style="color:#fff; font-weight:700; font-size:1.5rem; letter-spacing:1px; text-transform:uppercase;">
+      Navas Ismail
+    </a>
+    
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+      style="border:none; outline:none;">
+      <span class="navbar-toggler-icon" style="filter:invert(1);"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav" style="gap:25px;">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html" 
+            style="color:#8220CC; font-size:1rem; font-weight:600; transition:all 0.3s; text-transform:uppercase;">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#home"
+            style="color:#ccc; font-size:1rem; font-weight:500; transition:all 0.3s; text-transform:uppercase;">
+            About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio"
+            style="color:#ccc; font-size:1rem; font-weight:500; transition:all 0.3s; text-transform:uppercase;">
+            Portfolio
+          </a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#services"
+            style="color:#ccc; font-size:1rem; font-weight:500; transition:all 0.3s; text-transform:uppercase;">
+            Services
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact"
+            style="color:#ccc; font-size:1rem; font-weight:500; transition:all 0.3s; text-transform:uppercase;">
+            Contact
+          </a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+<script>
+  // Navbar hover color logic for #8220CC accent
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => link.style.color = '#8220CC');
+    link.addEventListener('mouseleave', () => {
+      if (!link.classList.contains('active')) link.style.color = '#ccc';
+    });
+  });
+</script>
+
+
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
                             START SECTION 2 - THE INTRO SECTION  
 /////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<section id="home" class="intro-section">
+<section id="home" class="intro-section" style="background: linear-gradient(135deg, #000 0%, #111 100%); color: #fff; padding: 100px 0 0; position: relative;">
   <div class="container">
     <div class="row align-items-center text-white">
+      
       <!-- START THE CONTENT FOR THE INTRO  -->
-      <div class="col-md-6 intros text-start">
-        <h1 class="display-2">
-          <span class="display-2--intro">Hey!, I'm Navas Ismail </span>
-          <span class="display-2--description lh-base">
-            A professional video editor.
+      <div class="col-md-6 intros text-start mt-5">
+        <h1 class="display-2" style="font-weight:700;">
+          <span class="display-2--intro" style="color:#8220CC;">Hey!, I'm Navas Ismail</span>
+          <span class="display-2--description lh-base" style="font-size:1.1rem; color:#ccc;">
+            A professional video editor. <br>
             I work with Adobe Premiere Pro, After Effects, CapCut, and more. <br>
-            I also create posters using Adobe Photoshop.
-            I specialize in clean, modern, and dynamic edits.
-            Along with video work, <br> I’m an AI Prompt Engineer.
-            I help brands improve content, creativity, and performance.
+            I also create posters using Adobe Photoshop. <br>
+            I specialize in clean, modern, and dynamic edits. <br>
+            Along with video work, I’m an AI Prompt Engineer — helping brands improve creativity and performance.
             <br><br>
             If you want it even shorter or more energetic for a video intro, just tell me.
           </span>
         </h1>
-        <button type="button" class="rounded-pill btn-rounded">Get in Touch
-          <span><i class="fas fa-arrow-right"></i></span>
-        </button>
+
+        <a href="https://wa.me/919747935264?text=Hello%20Navas%20Ismail%20👋" target="_blank" style="text-decoration:none;">
+          <button type="button" class="rounded-pill btn-rounded" 
+                  style="background:#8220CC; color:#fff; border:none; padding:12px 28px; font-weight:600; transition:all .3s ease; border-radius:50px; cursor:pointer;">
+            Get in Touch <span><i class="fas fa-arrow-right" style="margin-left:8px;"></i></span>
+          </button>
+        </a>
+
       </div>
 
       <!-- START THE CONTENT FOR THE VIDEO -->
       <div class="col-md-6 intros text-end">
-        <div class="video-box position-relative">
-          <!-- <img src="images/arts/intro-section-illustration.png" alt="video illustration" class="img-fluid"> -->
+        <div class="video-box position-relative" 
+          style="display:inline-block; border-radius:25px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.6); border:2px solid #8220CC; transition:transform .3s ease;">
           
-          <video class="img-fluid rounded-4 shadow-lg" autoplay muted loop playsinline>
+          <!-- Video -->
+          <video 
+            class="img-fluid"
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            style="width:100%; height:auto; border-radius:25px; object-fit:cover; filter:brightness(0.9); transition:transform 0.4s ease;"
+            onmouseover="this.style.transform='scale(1.03)'" 
+            onmouseout="this.style.transform='scale(1)'">
             <source src="images/arts/1103.MP4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
 
-          <!-- <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
-            <span>
+          <!-- Play button overlay -->
+          <a href="images/arts/1103.MP4" class="glightbox position-absolute top-50 start-50 translate-middle" style="text-decoration:none;">
+            <span style="font-size:4rem; color:#8220CC; transition:all .3s;">
               <i class="fas fa-play-circle"></i>
             </span>
-            <span class="border-animation border-animation--border-1"></span>
-            <span class="border-animation border-animation--border-2"></span>
-          </a> -->
+          </a>
         </div>
       </div>
     </div>
   </div>
 
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <!-- Keep Original White Wave Divider -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="display:block;">
     <path fill="#ffffff" fill-opacity="1"
       d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320
       C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
     </path>
   </svg>
 </section>
+
+<!-- Lightbox -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    autoplayVideos: true
+  });
+</script>
 
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////
@@ -152,233 +215,250 @@
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////
                          START SECTION 4 - THE SERVICES  
 ///////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-
-<section id="services" class="services">
+<section id="services" class="services" style="background-color:#fff; color:#111; padding:80px 0;">
   <div class="container">
+
+    <!-- HEADING -->
     <div class="row text-center">
-      <h1 class="display-3 fw-bold mt-5">Our Services</h1>
-      <div class="heading-line mb-1"></div>
+      <h1 class="display-3 fw-bold mt-5" style="color:#8220CC;">Our Services</h1>
+      <div class="heading-line mb-1" style="width:80px; height:4px; background:#8220CC; margin:10px auto;"></div>
     </div>
 
-    <!-- START THE DESCRIPTION CONTENT  -->
+    <!-- DESCRIPTION -->
     <div class="row pt-2 pb-2 mt-0 mb-3">
-      <div class="col-md-6 border-right">
-        <div class="bg-white p-3">
-          <h2 class="fw-bold text-capitalize text-center">
+      <div class="col-md-6" style="border-right:1px solid rgba(0,0,0,0.1);">
+        <div class="p-3">
+          <h2 class="fw-bold text-center" style="color:#111; font-size:1.3rem;">
             From creative concept to final delivery — we bring visuals to life with precision and style.
           </h2>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="bg-white p-4 text-start">
-          <p class="fw-light">
+        <div class="p-4 text-start">
+          <p class="fw-light" style="color:#333; font-size:1rem;">
             Our creative studio specializes in post-production and design services that elevate your content.
             From cinematic grading to high-energy edits, we ensure your visuals stand out with professional polish and storytelling impact.
           </p>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- START THE CONTENT FOR THE SERVICES  -->
-  <div class="container">
 
     <!-- COLOUR GRADING -->
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-        <div class="services__content">
-          <div class="icon d-block fas fa-adjust"></div>
-          <h3 class="display-3--title mt-1">Colour Grading</h3>
-          <p class="lh-lg">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mt-4">
+        <div style="padding:20px;">
+          <div class="icon fas fa-adjust" style="font-size:2rem; color:#8220CC; margin-bottom:10px;"></div>
+          <h3 style="color:#111; font-weight:700;">Colour Grading</h3>
+          <p style="color:#333;">
             We enhance your visuals with rich tones, cinematic color balance, and precise lighting adjustments.
             Our colour grading ensures your project looks polished, consistent, and emotionally engaging.
           </p>
-          <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
-            <span><i class="fas fa-arrow-right"></i></span>
+          <button type="button" style="background:#8220CC; color:#fff; border:none; border-radius:50px; padding:10px 24px; font-weight:600; transition:0.3s;">
+            Learn more <span><i class="fas fa-arrow-right"></i></span>
           </button>
         </div>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
-        <div class="services__pic">
-          <img src="images/services/colorgrading.webp" alt="Colour grading illustration" class="img-fluid">
-        </div>
+      <div class="col-lg-6 mt-4 text-end">
+        <img src="images/services/colorgrading.webp" alt="Colour grading" style="width:100%; border-radius:10px;">
       </div>
     </div>
 
     <!-- MOTION GRAPHICS -->
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
-        <div class="services__pic">
-          <img src="images/services/motiongraphics.avif" alt="Motion graphics illustration" class="img-fluid">
-        </div>
+    <div class="row align-items-center mt-5">
+      <div class="col-lg-6 text-start">
+        <img src="images/services/colorgrading.webp" alt="Motion graphics" style="width:100%; border-radius:10px;">
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-        <div class="services__content">
-          <div class="icon d-block fas fa-play-circle"></div>
-          <h3 class="display-3--title mt-1">Motion Graphics</h3>
-          <p class="lh-lg">
+      <div class="col-lg-6 mt-4">
+        <div style="padding:20px;">
+          <div class="icon fas fa-play-circle" style="font-size:2rem; color:#8220CC; margin-bottom:10px;"></div>
+          <h3 style="color:#111; font-weight:700;">Motion Graphics</h3>
+          <p style="color:#333;">
             We design sleek and professional motion graphics to make your visuals dynamic.
             From explainer videos to social content, we create smooth animations that engage and inform.
           </p>
-          <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
-            <span><i class="fas fa-arrow-right"></i></span>
+          <button type="button" style="background:#8220CC; color:#fff; border:none; border-radius:50px; padding:10px 24px; font-weight:600; transition:0.3s;">
+            Learn more <span><i class="fas fa-arrow-right"></i></span>
           </button>
         </div>
       </div>
     </div>
 
     <!-- BEAT SYNC -->
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-        <div class="services__content">
-          <div class="icon d-block fas fa-music"></div>
-          <h3 class="display-3--title mt-1">Beat Sync</h3>
-          <p class="lh-lg">
+    <div class="row align-items-center mt-5">
+      <div class="col-lg-6 mt-4">
+        <div style="padding:20px;">
+          <div class="icon fas fa-music" style="font-size:2rem; color:#8220CC; margin-bottom:10px;"></div>
+          <h3 style="color:#111; font-weight:700;">Beat Sync</h3>
+          <p style="color:#333;">
             Our beat sync editing ensures every cut, transition, and visual move flows perfectly with your soundtrack.
             Ideal for music videos, reels, and promotional content that need rhythm-driven storytelling.
           </p>
-          <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
-            <span><i class="fas fa-arrow-right"></i></span>
+          <button type="button" style="background:#8220CC; color:#fff; border:none; border-radius:50px; padding:10px 24px; font-weight:600; transition:0.3s;">
+            Learn more <span><i class="fas fa-arrow-right"></i></span>
           </button>
         </div>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
-        <div class="services__pic">
-          <img src="images/services/beat sync.webp" alt="Beat sync illustration" class="img-fluid">
-        </div>
+      <div class="col-lg-6 mt-4 text-end">
+        <img src="images/services/colorgrading.webp" alt="Beat sync" style="width:100%; border-radius:10px;">
       </div>
     </div>
 
     <!-- CARTOON GENERATION -->
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
-        <div class="services__pic">
-          <img src="images/services/cartoon generation.jpg" alt="Cartoon generation illustration" class="img-fluid">
-        </div>
+    <div class="row align-items-center mt-5">
+      <div class="col-lg-6 text-start">
+        <img src="images/services/colorgrading.webp" alt="Cartoon generation" style="width:100%; border-radius:10px;">
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-        <div class="services__content">
-          <div class="icon d-block fas fa-user-ninja"></div>
-          <h3 class="display-3--title mt-1">Cartoon Generation</h3>
-          <p class="lh-lg">
+      <div class="col-lg-6 mt-4">
+        <div style="padding:20px;">
+          <div class="icon fas fa-user-ninja" style="font-size:2rem; color:#8220CC; margin-bottom:10px;"></div>
+          <h3 style="color:#111; font-weight:700;">Cartoon Generation</h3>
+          <p style="color:#333;">
             We turn your ideas, footage, or characters into vivid cartoon-style visuals.
             From explainer animations to digital storytelling, we give your content a unique and playful edge.
           </p>
-          <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
-            <span><i class="fas fa-arrow-right"></i></span>
+          <button type="button" style="background:#8220CC; color:#fff; border:none; border-radius:50px; padding:10px 24px; font-weight:600; transition:0.3s;">
+            Learn more <span><i class="fas fa-arrow-right"></i></span>
           </button>
         </div>
       </div>
     </div>
 
     <!-- POSTER DESIGN -->
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-        <div class="services__content">
-          <div class="icon d-block fas fa-paint-brush"></div>
-          <h3 class="display-3--title mt-1">Poster Design</h3>
-          <p class="lh-lg">
+    <div class="row align-items-center mt-5">
+      <div class="col-lg-6 mt-4">
+        <div style="padding:20px;">
+          <div class="icon fas fa-paint-brush" style="font-size:2rem; color:#8220CC; margin-bottom:10px;"></div>
+          <h3 style="color:#111; font-weight:700;">Poster Design</h3>
+          <p style="color:#333;">
             We design stunning posters for brands, events, and campaigns that grab attention instantly.
             Each design blends creativity with strategy — ensuring your message stands out online and offline.
           </p>
-          <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
-            <span><i class="fas fa-arrow-right"></i></span>
+          <button type="button" style="background:#8220CC; color:#fff; border:none; border-radius:50px; padding:10px 24px; font-weight:600; transition:0.3s;">
+            Learn more <span><i class="fas fa-arrow-right"></i></span>
           </button>
         </div>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
-        <div class="services__pic">
-          <img src="images/services/poster desing .avif" alt="Poster design illustration" class="img-fluid">
-        </div>
+      <div class="col-lg-6 mt-4 text-end">
+        <img src="images/services/colorgrading.webp" alt="Poster design" style="width:100%; border-radius:10px;">
       </div>
     </div>
 
   </div>
 </section>
 
+<!-- Bottom Wave -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="display:block;">
+  <path fill="#000" fill-opacity="1"
+    d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L0,320Z">
+  </path>
+</svg>
+
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
-                       START SECTION 6 - THE FAQ 
+                       START SECTION 6 - THE FAQ  
 //////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<section id="faq" class="faq">
+<section id="faq" class="faq" style="background-color: #000; color: #fff; padding: 80px 0; font-family: 'Poppins', sans-serif;">
   <div class="container">
     <div class="row text-center">
-      <h1 class="display-3 fw-bold text-uppercase">faq</h1>
-      <div class="heading-line"></div>
-      <p class="lead">Answers to some of the most common questions about our creative services.</p>
+      <h1 class="display-3 fw-bold text-uppercase" style="color: #fff; letter-spacing: 2px;">FAQ</h1>
+      <div class="heading-line" style="width: 90px; height: 4px; background: #8220CC; margin: 20px auto; border-radius: 3px;"></div>
+      <p class="lead" style="color: #aaa; font-size: 1.1rem;">Answers to some of the most common questions about our creative services.</p>
     </div>
 
-    <!-- ACCORDION CONTENT  -->
+    <!-- ACCORDION CONTENT -->
     <div class="row mt-5">
       <div class="col-md-12">
         <div class="accordion" id="accordionExample">
 
-          <!-- ACCORDION ITEM 1 -->
-          <div class="accordion-item shadow mb-3">
+          <!-- ACCORDION ITEM TEMPLATE -->
+          <div class="accordion-item shadow mb-3" style="background-color: #0d0d0d; border: 1px solid #222; border-radius: 12px; overflow: hidden;">
             <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                style="background-color: #111; color: #fff; font-weight: 500; font-size: 1rem; border: none; box-shadow: none; transition: all 0.3s ease;">
                 What does your Colour Grading service include?
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Our colour grading service enhances the visual tone and mood of your video. We balance exposure, correct colours, and create cinematic looks to match your brand or project theme. Whether it’s a film, ad, or social reel, we make your visuals pop with precision.
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body" style="background-color: #000; color: #ccc; border-top: 1px solid #222; line-height: 1.8;">
+                Our colour grading service enhances the visual tone and mood of your video. We balance exposure,
+                correct colours, and create cinematic looks to match your brand or project theme. Whether it’s a film,
+                ad, or social reel, we make your visuals pop with precision.
               </div>
             </div>
           </div>
 
           <!-- ACCORDION ITEM 2 -->
-          <div class="accordion-item shadow mb-3">
+          <div class="accordion-item shadow mb-3" style="background-color: #0d0d0d; border: 1px solid #222; border-radius: 12px;">
             <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                style="background-color: #111; color: #fff; font-weight: 500; font-size: 1rem; border: none; box-shadow: none; transition: all 0.3s ease;">
                 What can I expect from your Motion Graphics work?
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                We create dynamic and professional motion graphics for ads, intros, explainers, and social content. Our designs combine smooth animation, modern style, and storytelling — bringing your ideas to life with clean, engaging visuals.
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body" style="background-color: #000; color: #ccc; border-top: 1px solid #222; line-height: 1.8;">
+                We create dynamic and professional motion graphics for ads, intros, explainers, and social content.
+                Our designs combine smooth animation, modern style, and storytelling — bringing your ideas to life
+                with clean, engaging visuals.
               </div>
             </div>
           </div>
 
           <!-- ACCORDION ITEM 3 -->
-          <div class="accordion-item shadow mb-3">
+          <div class="accordion-item shadow mb-3" style="background-color: #0d0d0d; border: 1px solid #222; border-radius: 12px;">
             <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                style="background-color: #111; color: #fff; font-weight: 500; font-size: 1rem; border: none; box-shadow: none;">
                 Do you offer Beat Sync editing for music or reels?
               </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Absolutely! Our beat sync service ensures your video transitions, cuts, and effects align perfectly with the rhythm and tempo of your track. It’s ideal for music videos, short reels, and promotional edits where energy and flow matter.
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body" style="background-color: #000; color: #ccc; border-top: 1px solid #222; line-height: 1.8;">
+                Absolutely! Our beat sync service ensures your video transitions, cuts, and effects align perfectly
+                with the rhythm and tempo of your track. It’s ideal for music videos, short reels, and promotional edits
+                where energy and flow matter.
               </div>
             </div>
           </div>
 
           <!-- ACCORDION ITEM 4 -->
-          <div class="accordion-item shadow mb-3">
+          <div class="accordion-item shadow mb-3" style="background-color: #0d0d0d; border: 1px solid #222; border-radius: 12px;">
             <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+                style="background-color: #111; color: #fff; font-weight: 500; font-size: 1rem; border: none; box-shadow: none;">
                 What’s included in the Cartoon Generation service?
               </button>
             </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Our cartoon generation service transforms characters, scenes, or real footage into vibrant cartoon-style visuals. Perfect for storytelling, branding, and fun social media content. We handle everything from illustration to animation.
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body" style="background-color: #000; color: #ccc; border-top: 1px solid #222; line-height: 1.8;">
+                Our cartoon generation service transforms characters, scenes, or real footage into vibrant
+                cartoon-style visuals. Perfect for storytelling, branding, and fun social media content. We handle
+                everything from illustration to animation.
               </div>
             </div>
           </div>
 
           <!-- ACCORDION ITEM 5 -->
-          <div class="accordion-item shadow mb-3">
+          <div class="accordion-item shadow mb-3" style="background-color: #0d0d0d; border: 1px solid #222; border-radius: 12px;">
             <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
+                style="background-color: #111; color: #fff; font-weight: 500; font-size: 1rem; border: none; box-shadow: none;">
                 Can you design custom posters for brands or events?
               </button>
             </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Yes — we craft high-impact posters for brands, events, and digital promotions. Our designs blend creativity and strategy to ensure your message stands out, both online and in print.
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body" style="background-color: #000; color: #ccc; border-top: 1px solid #222; line-height: 1.8;">
+                Yes — we craft high-impact posters for brands, events, and digital promotions. Our designs blend
+                creativity and strategy to ensure your message stands out, both online and in print.
               </div>
             </div>
           </div>
@@ -388,74 +468,82 @@
     </div>
   </div>
 </section>
+
+<script>
+  // Change active accordion title color to your accent (#8220CC)
+  document.querySelectorAll('.accordion-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.accordion-button').forEach(b => b.style.color = '#fff');
+      if (!btn.classList.contains('collapsed')) {
+        btn.style.color = '#8220CC';
+      }
+    });
+  });
+</script>
 
 
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////
                               START SECTION 7 - THE PORTFOLIO  
 //////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<section id="portfolio" class="portfolio">
+<section id="portfolio" class="portfolio" style="background:#000; padding:80px 0; color:#fff; font-family:'Poppins',sans-serif;">
   <div class="container">
+    <!-- Section Heading -->
     <div class="row text-center mt-5">
-      <h1 class="display-3 fw-bold text-capitalize">Latest Work</h1>
-      <div class="heading-line"></div>
-      <p class="lead">
-        Here are a few of my recent video projects — creative edits, motion graphics, and storytelling in action.
-      </p>
+      <h1 style="font-size:2.8rem; font-weight:700; color:#fff; letter-spacing:1px;">Latest Reels</h1>
+      <div style="width:100px; height:4px; background:#8220CC; margin:20px auto; border-radius:5px; box-shadow:0 0 10px #8220CC;"></div>
+      <p style="color:#aaa; font-size:1.1rem;">Short-form vertical edits — storytelling packed into seconds.</p>
     </div>
 
-    <!-- START THE PORTFOLIO ITEMS  -->
+    <!-- Portfolio Grid -->
     <div class="row justify-content-center mt-5 g-4">
 
-      <!-- Video Project 1 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="portfolio-box shadow">
-          <a href="videos/work1.mp4" class="glightbox" data-gallery="portfolio" data-type="video">
-            <video class="img-fluid rounded-3" autoplay muted loop playsinline>
-              <source src="videos/work1.mp4" type="video/mp4">
+      <!-- Reel 1 -->
+      <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+        <div class="portfolio-box shadow" 
+             style="position:relative; border-radius:20px; overflow:hidden; aspect-ratio:9/16; width:100%; max-width:340px; background:#111; transition:transform 0.3s ease, box-shadow 0.3s ease;">
+          <a href="images/arts/1103.MP4" class="glightbox" data-gallery="portfolio" data-type="video">
+            <video autoplay muted loop playsinline 
+                   style="width:100%; height:100%; object-fit:cover; border-radius:20px; filter:brightness(85%); transition:filter 0.3s ease;">
+              <source src="images/arts/1103.MP4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4>Colour Grading Showcase</h4>
-                <p>Creative Cinematic Edit</p>
-              </div>
+            <div class="portfolio-info" 
+                 style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(180deg,transparent 0%, rgba(0,0,0,0.9) 100%); color:#fff; padding:15px;">
             </div>
           </a>
         </div>
       </div>
 
-      <!-- Video Project 2 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="portfolio-box shadow">
-          <a href="videos/work2.mp4" class="glightbox" data-gallery="portfolio" data-type="video">
-            <video class="img-fluid rounded-3" autoplay muted loop playsinline>
-              <source src="videos/work2.mp4" type="video/mp4">
+      <!-- Reel 2 -->
+      <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+        <div class="portfolio-box shadow" 
+             style="position:relative; border-radius:20px; overflow:hidden; aspect-ratio:9/16; width:100%; max-width:340px; background:#111; transition:transform 0.3s ease, box-shadow 0.3s ease;">
+          <a href="images/portfolio/1014.mp4" class="glightbox" data-gallery="portfolio" data-type="video">
+            <video autoplay muted loop playsinline 
+                   style="width:100%; height:100%; object-fit:cover; border-radius:20px; filter:brightness(85%); transition:filter 0.3s ease;">
+              <source src="images/portfolio/1014.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4>Motion Graphics Edit</h4>
-                <p>Dynamic Visual Story</p>
-              </div>
+            <div class="portfolio-info" 
+                 style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(180deg,transparent 0%, rgba(0,0,0,0.9) 100%); color:#fff; padding:15px;">
             </div>
           </a>
         </div>
       </div>
 
-      <!-- Video Project 3 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="portfolio-box shadow">
-          <a href="videos/work3.mp4" class="glightbox" data-gallery="portfolio" data-type="video">
-            <video class="img-fluid rounded-3" autoplay muted loop playsinline>
-              <source src="videos/work3.mp4" type="video/mp4">
+      <!-- Reel 3 -->
+      <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+        <div class="portfolio-box shadow" 
+             style="position:relative; border-radius:20px; overflow:hidden; aspect-ratio:9/16; width:100%; max-width:340px; background:#111; transition:transform 0.3s ease, box-shadow 0.3s ease;">
+          <a href="images/portfolio/1008(1).mp4" class="glightbox" data-gallery="portfolio" data-type="video">
+            <video autoplay muted loop playsinline 
+                   style="width:100%; height:100%; object-fit:cover; border-radius:20px; filter:brightness(85%); transition:filter 0.3s ease;">
+              <source src="images/portfolio/1008(1).mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-            <div class="portfolio-info">
-              <div class="caption">
-                <h4>Beat Sync Edit</h4>
-                <p>High-Energy Music Cut</p>
-              </div>
+            <div class="portfolio-info" 
+                 style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(180deg,transparent 0%, rgba(0,0,0,0.9) 100%); color:#fff; padding:15px;">
             </div>
           </a>
         </div>
@@ -473,39 +561,52 @@
     selector: '.glightbox',
     touchNavigation: true,
     autoplayVideos: true,
+    plyr: { css: '', js: '' }
+  });
+
+  // Add hover glow effect with #8220CC
+  document.querySelectorAll('.portfolio-box').forEach(box => {
+    box.addEventListener('mouseenter', () => {
+      box.style.boxShadow = '0 0 20px #8220CC';
+      box.style.transform = 'scale(1.03)';
+    });
+    box.addEventListener('mouseleave', () => {
+      box.style.boxShadow = 'none';
+      box.style.transform = 'scale(1)';
+    });
   });
 </script>
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////
                            START SECTION 8 - THE CONTACT FORM -->
-<section id="contact" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); overflow: hidden; position: relative; padding: 80px 0;">
-  <div class="container text-white" style="position: relative; z-index: 2;">
+<section id="contact" style="background:#000; overflow:hidden; position:relative; padding:80px 0;">
+  <div class="container text-white" style="position:relative; z-index:2;">
     <div class="row text-center mb-5">
-      <h1 style="font-size: 2.8rem; font-weight: 700; background: linear-gradient(90deg, #ff6b6b, #feca57); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Let's Work Together</h1>
-      <p style="margin-top: 15px; color: rgba(255,255,255,0.8); font-size: 1.1rem;">
+      <h1 style="font-size:2.8rem; font-weight:700; color:#8220CC;">Let's Work Together</h1>
+      <p style="margin-top:15px; color:rgba(255,255,255,0.8); font-size:1.1rem;">
         Whether it’s video editing, motion graphics, or creative design — I’m ready to bring your ideas to life.
       </p>
     </div>
 
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); padding: 40px 50px;">
+        <div style="background:rgba(255,255,255,0.05); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.1); border-radius:20px; box-shadow:0 8px 30px rgba(0,0,0,0.6); padding:40px 50px;">
           <form class="row g-4">
             <div class="col-md-6 mb-4">
-              <input type="text" placeholder="Your Name" required 
-                style="width:100%; background:transparent; border:none; border-bottom:2px solid rgba(255,255,255,0.2); color:white; padding:10px 0; font-size:1rem; outline:none;">
+              <input type="text" placeholder="Your Name" required
+                style="width:100%; background:transparent; border:none; border-bottom:2px solid #8220CC; color:white; padding:10px 0; font-size:1rem; outline:none;">
             </div>
             <div class="col-md-6 mb-4">
-              <input type="email" placeholder="Email Address" required 
-                style="width:100%; background:transparent; border:none; border-bottom:2px solid rgba(255,255,255,0.2); color:white; padding:10px 0; font-size:1rem; outline:none;">
+              <input type="email" placeholder="Email Address" required
+                style="width:100%; background:transparent; border:none; border-bottom:2px solid #8220CC; color:white; padding:10px 0; font-size:1rem; outline:none;">
             </div>
             <div class="col-12 mb-4">
               <textarea rows="4" placeholder="Your Message" required
-                style="width:100%; background:transparent; border:none; border-bottom:2px solid rgba(255,255,255,0.2); color:white; padding:10px 0; font-size:1rem; outline:none; resize:none;"></textarea>
+                style="width:100%; background:transparent; border:none; border-bottom:2px solid #8220CC; color:white; padding:10px 0; font-size:1rem; outline:none; resize:none;"></textarea>
             </div>
             <div class="col-12 text-center">
               <button type="submit"
-                style="background: linear-gradient(90deg, #ff6b6b, #feca57); color:black; border:none; border-radius:50px; padding:12px 40px; font-weight:600; font-size:1.1rem; transition: all 0.3s ease;">
+                style="background:#8220CC; color:white; border:none; border-radius:50px; padding:12px 40px; font-weight:600; font-size:1.1rem; transition:all 0.3s ease;">
                 Send Message 🚀
               </button>
             </div>
@@ -515,15 +616,15 @@
     </div>
   </div>
 
-  <!-- Floating circles for style -->
-  <div style="position:absolute; width:150px; height:150px; top:10%; left:15%; border-radius:50%; background:radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); animation: float1 6s ease-in-out infinite;"></div>
-  <div style="position:absolute; width:200px; height:200px; bottom:15%; right:10%; border-radius:50%; background:radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); animation: float2 6s ease-in-out infinite;"></div>
-  <div style="position:absolute; width:120px; height:120px; bottom:30%; left:5%; border-radius:50%; background:radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); animation: float3 6s ease-in-out infinite;"></div>
+  <!-- Floating circles for subtle ambient light -->
+  <div style="position:absolute; width:150px; height:150px; top:10%; left:15%; border-radius:50%; background:radial-gradient(circle, rgba(130,32,204,0.1) 0%, transparent 70%); animation:float1 6s ease-in-out infinite;"></div>
+  <div style="position:absolute; width:200px; height:200px; bottom:15%; right:10%; border-radius:50%; background:radial-gradient(circle, rgba(130,32,204,0.1) 0%, transparent 70%); animation:float2 6s ease-in-out infinite;"></div>
+  <div style="position:absolute; width:120px; height:120px; bottom:30%; left:5%; border-radius:50%; background:radial-gradient(circle, rgba(130,32,204,0.1) 0%, transparent 70%); animation:float3 6s ease-in-out infinite;"></div>
 
   <style>
-    @keyframes float1 { 0%,100% { transform: translateY(0);} 50% {transform: translateY(-15px);} }
-    @keyframes float2 { 0%,100% { transform: translateY(0);} 50% {transform: translateY(-10px);} }
-    @keyframes float3 { 0%,100% { transform: translateY(0);} 50% {transform: translateY(-20px);} }
+    @keyframes float1 { 0%,100% { transform:translateY(0);} 50% {transform:translateY(-15px);} }
+    @keyframes float2 { 0%,100% { transform:translateY(0);} 50% {transform:translateY(-10px);} }
+    @keyframes float3 { 0%,100% { transform:translateY(0);} 50% {transform:translateY(-20px);} }
   </style>
 </section>
 
@@ -586,24 +687,53 @@
     </div>
   </div> -->
 
-  <!-- START THE SOCIAL MEDIA CONTENT  -->
-  <!-- <div class="footer-sm" style="background-color: #212121;">
-    <div class="container">
-      <div class="row py-4 text-center text-white">
-        <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
-          Connect with me social media
-        </div>
-        <div class="col-lg-7 col-md-6">
-          <a href=""><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a> -->
-          <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
-          <!-- <a href="#"><i class="fab fa-github"></i></a> -->
-          <!-- <a href="#"><i class="fab fa-linkedin"></i></a> -->
-          <!-- <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
+<!-- START THE SOCIAL MEDIA CONTENT -->
+<div class="footer-sm" style="background-color: #000; color: #fff;">
+  <div class="container">
+    <div class="row py-4 text-center align-items-center">
+      
+      <!-- Left Text -->
+      <div class="col-lg-5 col-md-6 mb-4 mb-md-0" 
+           style="font-size: 1.1rem; font-weight: 500; letter-spacing: 0.5px;">
+        Connect with me on social media
       </div>
+
+      <!-- Social Icons -->
+      <div class="col-lg-7 col-md-6">
+        <a href="https://wa.me/919747935264?text=Hello%20Navas%20Ismail%20👋" target="_blank"
+           style="color:#8220CC; font-size:1.4rem; margin:0 10px; transition:color 0.3s;">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" 
+           style="color:#8220CC; font-size:1.4rem; margin:0 10px; transition:color 0.3s;">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" 
+           style="color:#8220CC; font-size:1.4rem; margin:0 10px; transition:color 0.3s;">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" 
+           style="color:#8220CC; font-size:1.4rem; margin:0 10px; transition:color 0.3s;">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" 
+           style="color:#8220CC; font-size:1.4rem; margin:0 10px; transition:color 0.3s;">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
     </div>
-  </div> -->
+  </div>
+</div>
+
+<script>
+  // Hover animation for icons
+  document.querySelectorAll('.footer-sm a').forEach(icon => {
+    icon.addEventListener('mouseenter', () => icon.style.color = '#fff');
+    icon.addEventListener('mouseleave', () => icon.style.color = '#8220CC');
+  });
+</script>
+
 
   <!-- START THE CONTENT FOR THE CAMPANY INFO -->
   <!-- <div class="container mt-5">
@@ -677,7 +807,7 @@
     <script type="text/javascript">
       const lightbox = GLightbox({
         'touchNavigation': true,
-        'href': 'https://www.youtube.com/watch?v=J9lS14nM1xg',
+        'href': 'images/arts/1103.MP4',
         'type': 'video',
         'source': 'youtube', //vimeo, youtube or local
         'width': 900,
