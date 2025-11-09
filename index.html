@@ -391,56 +391,122 @@
 
 
 
-
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////
-              START SECTION 8 - GET STARTED  
-/////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<!-- <section id="contact" class="get-started">
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////
+                              START SECTION 7 - THE PORTFOLIO  
+//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<section id="portfolio" class="portfolio">
   <div class="container">
-    <div class="row text-center">
-      <h1 class="display-3 fw-bold text-capitalize">Get started</h1>
+    <div class="row text-center mt-5">
+      <h1 class="display-3 fw-bold text-capitalize">Latest Work</h1>
       <div class="heading-line"></div>
-      <p class="lh-lg">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero illum architecto modi.
+      <p class="lead">
+        Here are a few of my recent video projects — creative edits, motion graphics, and storytelling in action.
       </p>
-    </div> -->
+    </div>
 
-    <!-- START THE CTA CONTENT  -->
-    <!-- <div class="row text-white">
-      <div class="col-12 col-lg-6 gradient shadow p-3">
-        <div class="cta-info w-100">
-          <h4 class="display-4 fw-bold">100% Satisfaction Guaranteed</h4>
-          <p class="lh-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias optio minima, tempore architecto sint ipsam dolore tempora facere laboriosam corrupti!
-          </p>
-          <h3 class="display-3--brief">What will be the next step?</h3>
-          <ul class="cta-info__list">
-            <li>We'll prepare the proposal.</li>
-            <li>we'll discuss it together.</li>
-            <li>let's start the discussion.</li>
-          </ul>
+    <!-- START THE PORTFOLIO ITEMS  -->
+    <div class="row justify-content-center mt-5 g-4">
+
+      <!-- Video Project 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-box shadow">
+          <a href="videos/work1.mp4" class="glightbox" data-gallery="portfolio" data-type="video">
+            <video class="img-fluid rounded-3" autoplay muted loop playsinline>
+              <source src="videos/work1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4>Colour Grading Showcase</h4>
+                <p>Creative Cinematic Edit</p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
-      <div class="col-12 col-lg-6 bg-white shadow p-3">
-        <div class="form w-100 pb-2">
-          <h4 class="display-3--title mb-5">start your project</h4>
-          <form action="#" class="row">
-            <div class="col-lg-6 col-md mb-3">
-              <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg">
+
+      <!-- Video Project 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-box shadow">
+          <a href="videos/work2.mp4" class="glightbox" data-gallery="portfolio" data-type="video">
+            <video class="img-fluid rounded-3" autoplay muted loop playsinline>
+              <source src="videos/work2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4>Motion Graphics Edit</h4>
+                <p>Dynamic Visual Story</p>
+              </div>
             </div>
-            <div class="col-lg-6 col-md mb-3">
-              <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg">
+          </a>
+        </div>
+      </div>
+
+      <!-- Video Project 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-box shadow">
+          <a href="videos/work3.mp4" class="glightbox" data-gallery="portfolio" data-type="video">
+            <video class="img-fluid rounded-3" autoplay muted loop playsinline>
+              <source src="videos/work3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="portfolio-info">
+              <div class="caption">
+                <h4>Beat Sync Edit</h4>
+                <p>High-Energy Music Cut</p>
+              </div>
             </div>
-            <div class="col-lg-12 mb-3">
-              <input type="email" placeholder="email address" id="inputEmail" class="shadow form-control form-control-lg">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Include Glightbox Script -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    autoplayVideos: true,
+  });
+</script>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////
+                           START SECTION 8 - THE CONTACT FORM -->
+<section id="contact" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); overflow: hidden; position: relative; padding: 80px 0;">
+  <div class="container text-white" style="position: relative; z-index: 2;">
+    <div class="row text-center mb-5">
+      <h1 style="font-size: 2.8rem; font-weight: 700; background: linear-gradient(90deg, #ff6b6b, #feca57); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Let's Work Together</h1>
+      <p style="margin-top: 15px; color: rgba(255,255,255,0.8); font-size: 1.1rem;">
+        Whether it’s video editing, motion graphics, or creative design — I’m ready to bring your ideas to life.
+      </p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); padding: 40px 50px;">
+          <form class="row g-4">
+            <div class="col-md-6 mb-4">
+              <input type="text" placeholder="Your Name" required 
+                style="width:100%; background:transparent; border:none; border-bottom:2px solid rgba(255,255,255,0.2); color:white; padding:10px 0; font-size:1rem; outline:none;">
             </div>
-            <div class="col-lg-12 mb-3">
-              <textarea name="message" placeholder="message" id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
+            <div class="col-md-6 mb-4">
+              <input type="email" placeholder="Email Address" required 
+                style="width:100%; background:transparent; border:none; border-bottom:2px solid rgba(255,255,255,0.2); color:white; padding:10px 0; font-size:1rem; outline:none;">
             </div>
-            <div class="text-center d-grid mt-1">
-              <button type="button" class="btn btn-primary rounded-pill pt-3 pb-3">
-                submit
-                <i class="fas fa-paper-plane"></i>
+            <div class="col-12 mb-4">
+              <textarea rows="4" placeholder="Your Message" required
+                style="width:100%; background:transparent; border:none; border-bottom:2px solid rgba(255,255,255,0.2); color:white; padding:10px 0; font-size:1rem; outline:none; resize:none;"></textarea>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit"
+                style="background: linear-gradient(90deg, #ff6b6b, #feca57); color:black; border:none; border-radius:50px; padding:12px 40px; font-weight:600; font-size:1.1rem; transition: all 0.3s ease;">
+                Send Message 🚀
               </button>
             </div>
           </form>
@@ -448,7 +514,20 @@
       </div>
     </div>
   </div>
-</section> -->
+
+  <!-- Floating circles for style -->
+  <div style="position:absolute; width:150px; height:150px; top:10%; left:15%; border-radius:50%; background:radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); animation: float1 6s ease-in-out infinite;"></div>
+  <div style="position:absolute; width:200px; height:200px; bottom:15%; right:10%; border-radius:50%; background:radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); animation: float2 6s ease-in-out infinite;"></div>
+  <div style="position:absolute; width:120px; height:120px; bottom:30%; left:5%; border-radius:50%; background:radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); animation: float3 6s ease-in-out infinite;"></div>
+
+  <style>
+    @keyframes float1 { 0%,100% { transform: translateY(0);} 50% {transform: translateY(-15px);} }
+    @keyframes float2 { 0%,100% { transform: translateY(0);} 50% {transform: translateY(-10px);} }
+    @keyframes float3 { 0%,100% { transform: translateY(0);} 50% {transform: translateY(-20px);} }
+  </style>
+</section>
+
+
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////
                            START SECTION 9 - THE FOOTER  
